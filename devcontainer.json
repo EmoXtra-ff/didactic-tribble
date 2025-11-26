@@ -1,0 +1,28 @@
+{
+  "name": "achour-docker-original",
+  "image": "ubuntu:22.04",
+
+  "runArgs": [
+    "--device=/dev/kvm"
+  ],
+
+  "mounts": [
+    {
+      "source": "/var/run/docker.sock",
+      "target": "/var/run/docker.sock",
+      "type": "bind"
+    }
+  ],
+
+  "forwardPorts": [
+    8006
+  ],
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-azuretools.vscode-docker"
+      ]
+    }
+  }
+}
